@@ -19,6 +19,7 @@ interface ParsedInput {
     isValid: boolean;
 }
 
+// TODO: We must use a NLP-based for entity extraction like Gemma2.
 const parseInput = (input: string): ParsedInput => {
     // Extract origin
     const originMatch = input.match(/from\s+([A-Za-z\s]+?)(?=\s+to|\s+on|\s+next|\s+in|\s+\d{1,2}|$)/i);
